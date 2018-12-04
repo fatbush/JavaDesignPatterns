@@ -8,7 +8,7 @@ package com.tony.lib.AdapterPattern.ObjectMode;
  */
 public class Adaptee {
 
-    public void SpecificRequest(){
-
+    public void specificRequest(){
+        System.out.println("Adaptee`s specificRequest 方法");
     }
 }

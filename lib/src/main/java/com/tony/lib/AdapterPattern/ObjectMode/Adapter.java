@@ -19,6 +19,6 @@ public class Adapter implements Target {
     @Override
     public void request() {
         // 这里是使用委托的方式完成特殊功能
-        this.adaptee.SpecificRequest();
+        this.adaptee.specificRequest();
     }
 }
