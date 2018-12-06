@@ -8,10 +8,13 @@ package com.tony.lib.BuilderPatternComplex;
  */
 public class Test {
     public static void main(String[] args) {
-        //Builder mBuilder = new MacbookBuilder().buildBoard("英特尔主板").build
-        Builder mBuilder = new MacbookBuilder();
-        Director pcDirector = new Director(mBuilder);
-        pcDirector.construct("英特尔主板", "Retina显示器");
-        System.out.println("Computer Info:" + mBuilder.create().toString());
+        Builder builder = new ConcreteBuilder();
+        builder.setAge(23)
+                .setName("Mirhunana")
+                .setSex(true)
+                .setHeight(180)
+                .setWeight(100);
+        Person person = builder.create();
+        System.out.println(person.toString());
     }
 }

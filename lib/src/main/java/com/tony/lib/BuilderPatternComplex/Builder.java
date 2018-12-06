@@ -2,36 +2,21 @@ package com.tony.lib.BuilderPatternComplex;
 
 /**
  * Created by Tony on 2018/12/5
- * description: 说明 第三步 抽象Builder类
+ * description: 说明 2、抽象建造者类Builder，就是上面的Builder的接口，目的就是为了为构造者提供统一的接口
  * Copyright: Copyright (c) Hori All right reserved
  * version:
  */
-public abstract class Builder {
+public interface Builder {
 
-    /**
-     * 设置主板
-     * @param board
-     */
-    public abstract void buildBoard(String board);
+    Builder setName(String name);
 
+    Builder setSex(boolean sex);
 
-    /**
-     * 设置显示器
-     *
-     * @param display
-     */
-    public abstract void buildDisplay(String display);
+    Builder setAge(int age);
 
+    Builder setHeight(float height);
 
-    /**
-     * 设置操作系统
-     *
-     */
-    public abstract void buildOS();
+    Builder setWeight(float weight);
 
-    /** 创建Computer
-     *
-     * @return
-     */
-    public abstract Computer create();
+    Person create();
 }
