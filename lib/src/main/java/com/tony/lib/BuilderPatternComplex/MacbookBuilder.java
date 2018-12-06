@@ -11,8 +11,10 @@ public class MacbookBuilder extends Builder {
 
     private Computer mComputer = new Macbook();
 
+    Builder mBuilder = null;
+
     @Override
-    public void  buildBoard(String board) {
+    public void buildBoard(String board) {
         mComputer.setBoard(board);
     }
 
